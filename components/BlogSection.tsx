@@ -57,47 +57,57 @@ const posts = [
 
 export default function BlogSection() {
     return (
-        <section className="py-16 bg-[#f9fbff]">
-            <div className="container-base text-center mb-12">
-                <h2 className="text-[32px] md:text-[42px] font-semibold text-blue-900 mb-4">
+        <section className="py-20 bg-[#0a0a0a] relative overflow-hidden">
+            <div className="container-base text-center mb-14">
+                <h2 className="text-[32px] md:text-[42px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 drop-shadow-lg mb-4">
                     Eng so‘nggi yangiliklar va blog
                 </h2>
-                <p className="text-gray-500 text-lg mt-2">
+                <p className="text-gray-400 text-lg mt-2 max-w-2xl mx-auto">
                     Talabalarimiz tanlagan mashhur chet elda o‘qish dasturlari
                 </p>
             </div>
 
-            <div className="container-base grid md:grid-cols-3 gap-8 px-20">
+            {/* Cards grid */}
+            <div className="container-base grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 sm:px-12 lg:px-20">
                 {posts.map((post) => (
                     <Card
                         key={post.id}
-                        className="h-[542px] relative rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition group cursor-pointer bg-white"
+                        className="group pb-5 relative rounded-3xl overflow-hidden backdrop-blur-xl bg-gradient-to-tr from-blue-500 to-purple-500 shadow-lg transition-all duration-500 cursor-pointer border-none"
                     >
-                        <img
-                            src={post.img}
-                            alt={post.title}
-                            className="w-full h-56 object-cover"
-                        />
-                        <CardContent className="p-6 flex flex-col justify-between h-[260px] text-center">
+                        {/* Image with hover scale */}
+                        <div className="relative w-full h-56 overflow-hidden">
+                            <img
+                                src={post.img}
+                                alt={post.title}
+                                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition"></div>
+                        </div>
+
+                        {/* Content */}
+                        <CardContent className="p-8 flex flex-col items-center justify-between h-[280px] text-left relative z-10">
                             <div>
-                                <div className="flex items-center gap-6 text-sm text-gray-500 mb-3">
-                                    <span className="flex items-center gap-1">
+                                <div className="flex items-center gap-6 text-sm text-gray-400 mb-4">
+                                    <span className="flex items-center gap-1 text-white">
                                         <Calendar className="w-4 h-4" /> {post.date}
                                     </span>
-                                    <span className="flex items-center gap-1">
+                                    <span className="flex items-center gap-1 text-white">
                                         <Eye className="w-4 h-4" /> {post.views}
                                     </span>
                                 </div>
-                                <h3 className="text-2xl font-semibold text-blue-900 line-clamp-2 mb-2">
+                                <h3 className="text-2xl font-bold text-white line-clamp-2 mb-3 transition">
                                     {post.title}
                                 </h3>
-                                <p className="text-gray-600 text-lg font-medium mt-2 line-clamp-2">{post.desc}</p>
+                                <p className="text-gray-300 text-lg font-medium mt-2 line-clamp-2">
+                                    {post.desc}
+                                </p>
                             </div>
 
-                            <div className="flex justify-center absolute bottom-5 left-40">
+                            {/* Action button */}
+                            <div className="flex justify-start mt-6">
                                 <Link
                                     href={`/blog/${post.id}`}
-                                    className="w-16 h-16 text-2xl rounded-full flex items-center justify-center text-blue-900 border-2 border-blue-900 group-hover:bg-blue-900 group-hover:text-white transition"
+                                    className="w-14 h-14 rounded-full flex items-center justify-center border-2 border-white text-white text-2xl font-bold group-hover:bg-purple-500 group-hover:text-white transition-all duration-500 shadow-lg shadow-blue-500/30"
                                 >
                                     →
                                 </Link>
@@ -107,11 +117,16 @@ export default function BlogSection() {
                 ))}
             </div>
 
-            <div className="flex justify-center mt-10">
-                <Link href="/blog" className="px-6 py-3 bg-blue-900 text-white font-semibold rounded-xl shadow hover:bg-blue-800 transition">
+            {/* More button */}
+            <div className="flex justify-center mt-14">
+                <Link
+                    href="/blog"
+                    className="px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg shadow-purple-500/40 hover:shadow-pink-500/40 transition duration-500"
+                >
                     Ko‘proq ko‘rish
                 </Link>
             </div>
         </section>
+
     )
 }

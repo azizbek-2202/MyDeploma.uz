@@ -55,7 +55,7 @@ const Page = () => {
                     <button
                         onClick={() => handlePageChange(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className="w-10 h-10 flex items-center justify-center rounded-full border text-gray-600 hover:bg-blue-900 hover:text-white disabled:opacity-50"
+                        className="w-10 h-10 flex items-center justify-center rounded-full border text-gray-600 hover:bg-purple-500 hover:text-white disabled:opacity-50"
                     >
                         ←
                     </button>
@@ -65,8 +65,8 @@ const Page = () => {
                             key={num}
                             onClick={() => handlePageChange(num)}
                             className={`w-10 h-10 flex items-center justify-center rounded-full border ${currentPage === num
-                                ? 'bg-blue-900 text-white'
-                                : 'text-gray-600 hover:bg-blue-900 hover:text-white'
+                                ? "bg-purple-500 text-white"
+                                : "text-gray-600 hover:bg-purple-500 hover:text-white"
                                 }`}
                         >
                             {num}
@@ -76,11 +76,12 @@ const Page = () => {
                     <button
                         onClick={() => handlePageChange(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className="w-10 h-10 flex items-center justify-center rounded-full border text-gray-600 hover:bg-blue-900 hover:text-white disabled:opacity-50"
+                        className="w-10 h-10 flex items-center justify-center rounded-full border text-gray-600 hover:bg-purple-500 hover:text-white disabled:opacity-50"
                     >
                         →
                     </button>
                 </div>
+
             </div>
 
             <Footer currentLang={currentLang} />

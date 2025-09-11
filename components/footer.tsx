@@ -11,8 +11,8 @@ export function Footer({ currentLang }: FooterProps) {
   const { t } = useTranslation(currentLang)
 
   return (
-    <footer className="bg-gray-100 py-10 mt-10 border-t">
-      <div className="container-base grid grid-cols-1 md:grid-cols-4 items-start gap-8 px-6 font-medium text-gray-500">
+    <footer className="py-10 mt-10">
+      <div className="container-base grid grid-cols-1 md:grid-cols-4 items-start gap-8 px-6 font-medium text-white">
 
         {/* Logo + Contact */}
         <div>
@@ -24,7 +24,7 @@ export function Footer({ currentLang }: FooterProps) {
 
         {/* Navigation */}
         <div>
-          <h4 className="font-semibold mb-3 text-[22px] text-blue-900">{t.footer.navigationTitle}</h4>
+          <h4 className="font-semibold mb-3 text-[22px] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 drop-shadow-lg">{t.footer.navigationTitle}</h4>
           <ul className="space-y-2 text-lg">
             <li><Link href="/about">{t.footer.navigation.about}</Link></li>
             <li><Link href="/">{t.footer.navigation.programs}</Link></li>
@@ -35,7 +35,7 @@ export function Footer({ currentLang }: FooterProps) {
 
         {/* Programs */}
         <div>
-          <h4 className="font-semibold mb-3 text-[22px] text-blue-900">{t.footer.programsTitle}</h4>
+          <h4 className="font-semibold mb-3 text-[22px] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 drop-shadow-lg">{t.footer.programsTitle}</h4>
           <ul className="space-y-2 text-lg">
             {t.footer.programsList.map((program: string, idx: number) => (
               <li key={idx}>{program}</li>
@@ -45,7 +45,7 @@ export function Footer({ currentLang }: FooterProps) {
 
         {/* Directions */}
         <div>
-          <h4 className="font-semibold mb-3 text-[22px] text-blue-900">{t.footer.directionsTitle}</h4>
+          <h4 className="font-semibold mb-3 text-[22px] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 drop-shadow-lg">{t.footer.directionsTitle}</h4>
           <ul className="space-y-2 text-lg">
             {t.footer.directionsList.map((dir: string, idx: number) => (
               <li key={idx}>{dir}</li>

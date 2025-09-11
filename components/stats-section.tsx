@@ -68,35 +68,44 @@ export function StatsSection({ currentLang }: StatsSectionProps) {
   }, [])
 
   return (
-    <section id="stats-section" className="py-16 bg-blue-50">
-      <div className="container-base px-4 sm:px-6 lg:px-8 bg-white shadow-xl shadow-gray-200 border border-[#eef5ff] py-10 rounded-[20px]">
+    <section id="stats-section" className="py-16 relative">
+      <div className="container-base px-4 sm:px-6 lg:px-8 py-14 rounded-3xl bg-gradient-to-tr from-blue-500 to-purple-500 shadow-2xl shadow-black/50">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-semibold text-blue-900 mb-4">
+          <h2 className="text-4xl font-semibold text-white tracking-wide">
             {t.stats.title}
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 max-w-6xl mx-auto">
           {stats.map((stat, index) => {
             const Icon = stat.icon
             return (
               <motion.div
                 key={index}
-                className="text-center"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="text-center font-bold rounded-2xl p-6 
+                  backdrop-blur-xl bg-white/20 border border-white/30 
+                  shadow-md shadow-black/30 hover:shadow-lg hover:shadow-blue-500/40 
+                  transition-all duration-500"
+                whileHover={{ scale: 1.07 }}
+                transition={{ type: "spring", stiffness: 250 }}
               >
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                {/* Icon container */}
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 
+                  bg-gradient-to-tr from-white/50 to-white/20 shadow-inner">
                   <Icon className={`w-8 h-8 ${stat.color}`} />
                 </div>
-                <div className="text-3xl font-bold text-blue-900 mb-2">
+
+                {/* Number */}
+                <div className="text-3xl mb-2 font-extrabold text-gray-900">
                   {startCounting ? (
                     <CountUp end={stat.number} suffix={stat.suffix} />
                   ) : (
                     `0${stat.suffix}`
                   )}
                 </div>
-                <div className="text-xl font-bold text-blue-900">
+
+                {/* Label */}
+                <div className="text-sm text-gray-600 font-medium tracking-wide">
                   {stat.label}
                 </div>
               </motion.div>
@@ -105,6 +114,7 @@ export function StatsSection({ currentLang }: StatsSectionProps) {
         </div>
       </div>
     </section>
+
   )
 }
 

@@ -28,12 +28,12 @@ const Page = () => {
         <div>
             <Header currentLang={currentLang} onLanguageChange={setCurrentLang} />
 
-            <div className="pt-10 pb-2.5 text-center bg-[#f8fbff]">
+            <div className="pt-10 pb-2.5 text-center">
                 <div className="container-base h-32">
-                    <h2 className="text-5xl mb-4 font-semibold text-blue-900">
+                    <h2 className="text-5xl mb-4 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 drop-shadow-lg">
                         {t.blog.title}
                     </h2>
-                    <h4 className="text-xl text-gray-500">{t.blog.subject}</h4>
+                    <h4 className="text-xl text-gray-300">{t.blog.subject}</h4>
                 </div>
             </div>
 
@@ -49,7 +49,7 @@ const Page = () => {
                 <button
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
-                    className="w-10 h-10 flex items-center justify-center rounded-full border text-gray-600 hover:bg-blue-900 hover:text-white disabled:opacity-50"
+                    className="w-10 h-10 flex items-center justify-center rounded-full border text-gray-600 hover:bg-purple-500 hover:text-white disabled:opacity-50"
                 >
                     ←
                 </button>
@@ -59,8 +59,8 @@ const Page = () => {
                         key={num}
                         onClick={() => handlePageChange(num)}
                         className={`w-10 h-10 flex items-center justify-center rounded-full border ${currentPage === num
-                            ? "bg-blue-900 text-white"
-                            : "text-gray-600 hover:bg-blue-900 hover:text-white"
+                            ? "bg-purple-500 text-white"
+                            : "text-gray-600 hover:bg-purple-500 hover:text-white"
                             }`}
                     >
                         {num}
@@ -70,7 +70,7 @@ const Page = () => {
                 <button
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
-                    className="w-10 h-10 flex items-center justify-center rounded-full border text-gray-600 hover:bg-blue-900 hover:text-white disabled:opacity-50"
+                    className="w-10 h-10 flex items-center justify-center rounded-full border text-gray-600 hover:bg-purple-500 hover:text-white disabled:opacity-50"
                 >
                     →
                 </button>

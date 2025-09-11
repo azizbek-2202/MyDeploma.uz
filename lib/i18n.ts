@@ -162,6 +162,7 @@ export const translations = {
         title2: "Daraja",
         daraja: [
           "Bakalavriat",
+          "Work and Travel",
           "Magistratura",
           "Ilmiy daraja",
           "Diplom va Sertifikar Kurslari",
@@ -660,6 +661,7 @@ export const translations = {
         title2: "Degree",
         daraja: [
           "Bachelor",
+          "Work and Travel",
           "Master",
           "PhD",
           "Diploma and Certificate Courses",
@@ -1134,6 +1136,7 @@ export const translations = {
         title2: "Степень",
         daraja: [
           "Бакалавриат",
+          "Work and Travel",
           "Магистратура",
           "Аспирантура",
           "Диплом и Сертификатные Курсы",
