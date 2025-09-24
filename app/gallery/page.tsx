@@ -33,18 +33,16 @@ const Page = () => {
             <Header currentLang={currentLang} onLanguageChange={setCurrentLang} />
 
             {/* Title section */}
-            <div className="pt-10 pb-2.5 text-center bg-[#f8fbff]">
-                <div className="container-base h-32">
-                    <h2 className="text-5xl mb-4 font-semibold text-blue-900">
-                        {t.gallery.title}
-                    </h2>
-                    <h4 className="text-xl text-gray-500">{t.gallery.subject}</h4>
-                </div>
+            <div className="container-base h-32 text-center py-20">
+                <h2 className="text-5xl mb-4 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 drop-shadow-lg">
+                    {t.gallery.title}
+                </h2>
+                <h4 className="subTitle">{t.gallery.subject}</h4>
             </div>
 
             {/* Cards section */}
-            <div className="container-base py-12 px-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="container-base py-20 px-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {currentGalereya.map((v: any) => (
                         <GalleryCard key={v.id || v.title} {...v} />
                     ))}

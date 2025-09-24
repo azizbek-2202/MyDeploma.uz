@@ -37,7 +37,7 @@ export function HeroSection({ currentLang }: HeroSectionProps) {
           <p className="text-xl sm:text-6xl text-white font-semibold mb-4">{t.hero.subtitle}</p>
           <p className="text-lg mb-8 max-w-2xl mx-auto text-pretty">{t.hero.description}</p>
           <Button size="lg" className="text-lg px-8 py-6 border-2 bg-white text-black 
-          hover:border-white hover:bg-transparent hover:text-white transition-all duration-300">
+          hover:border-white hover:bg-transparent hover:text-white transition-all duration-300 cursor-pointer">
             {t.hero.cta}
           </Button>
         </div>

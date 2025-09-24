@@ -19,7 +19,7 @@ export function LanguageSwitcher({ currentLang, onLanguageChange }: LanguageSwit
         variant="ghost"
         size="sm"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 hover:bg-accent"
+        className="flex items-center gap-2 border-2 border-gray-300 hover:bg-none cursor-pointer rounded-xl"
       >
         <span className="text-sm font-medium">{languages[currentLang]}</span>
         <ChevronDown className="h-4 w-4" />
@@ -34,7 +34,7 @@ export function LanguageSwitcher({ currentLang, onLanguageChange }: LanguageSwit
                 onLanguageChange(code as Language)
                 setIsOpen(false)
               }}
-              className="w-full px-3 py-2 text-accent-foreground text-left text-sm hover:bg-gray-200/80 first:rounded-t-md last:rounded-b-md"
+              className="w-full px-3 py-2 text-accent-foreground text-left text-sm hover:bg-gray-200/80 first:rounded-t-md last:rounded-b-md  cursor-pointer"
             >
               {name}
             </button>

@@ -33,7 +33,7 @@ const Page = () => {
                     <h2 className="text-5xl mb-4 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 drop-shadow-lg">
                         {t.blog.title}
                     </h2>
-                    <h4 className="text-xl text-gray-300">{t.blog.subject}</h4>
+                    <h4 className="subTitle">{t.blog.subject}</h4>
                 </div>
             </div>
 

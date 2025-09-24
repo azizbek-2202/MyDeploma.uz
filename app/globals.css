@@ -128,4 +128,26 @@
   .container-base{
     @apply max-w-[1350px] mx-auto px-10 sm:px-0
   }
+
+  .subTitle{
+    @apply text-xl text-gray-300
+  }
+  
+}
+
+/* 3D uchun */
+.perspective {
+  perspective: 1000px;
+}
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Hexagon shakl */
+.hex-mask {
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
 }

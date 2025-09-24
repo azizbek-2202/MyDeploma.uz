@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans bg-black text-white ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={`font-sans bg-gray-50 dark:bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white ${GeistSans.variable} ${GeistMono.variable}`}>
         {children}
       </body>
     </html>
