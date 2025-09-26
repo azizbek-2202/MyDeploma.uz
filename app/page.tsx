@@ -1,9 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
-import { SearchSection } from "@/components/search-section"
 import { ProgramsCarousel } from "@/components/programs-carousel"
 import { ServicesSection } from "@/components/services-section"
 import { StatsSection } from "@/components/stats-section"
@@ -12,9 +11,18 @@ import { Footer } from "@/components/footer"
 import type { Language } from "@/lib/i18n"
 import Questions from "@/components/questions-section"
 import BlogSection from "@/components/BlogSection"
+import { useRouter } from "next/navigation"
 
 export default function HomePage() {
   const [currentLang, setCurrentLang] = useState<Language>("uz")
+  const [load, setLoad]=useState(true)
+  const router = useRouter()
+
+  useEffect(()=>{
+    if (load) {
+      router.push("/test")
+    }
+  },[load,router])
 
   return (
     <div className="min-h-screen">

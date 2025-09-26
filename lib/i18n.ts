@@ -7,6 +7,21 @@ export const languages = {
 export type Language = keyof typeof languages;
 export const translations = {
   uz: {
+    test: {
+      title: "Mydiploma",
+      tm: "TM",
+      subtitle: "Sayt Test rejimida ishlamoqda",
+      phone: "Telefon",
+      info: "Ko'proq ma'lumot",
+      ins: "Instagram",
+      tel: "Telegram",
+      modal: {
+        title: "Qo'shimcha ma'lumotlar",
+        subtitle: "Qo‘shimcha ma’lumotlarni bizning",
+        kan: "Telegram kanalimizdan",
+        subtitle2: "olishingiz mumkin."
+      }
+    },
     nav: {
       home: "Bosh sahifa",
       about: "Biz haqimizda",
@@ -210,7 +225,7 @@ export const translations = {
     },
     hero: {
       title: "Chet elda o'qish oson",
-      subtitle: "MyDeploma.uz",
+      subtitle: "Mydiploma.uz",
       description:
         "Biz sizga dunyoning eng yaxshi universitetlarida o'qish imkoniyatini taqdim etamiz. Professional maslahat va to'liq qo'llab-quvvatlash bilan.",
       cta: "Men o'qishni boshlayman",
@@ -587,9 +602,9 @@ export const translations = {
       subject: "Bizga aloqaga chiqing",
     },
     footer: {
-      phone: "+998 33 900 00 30",
-      email: "info@world.uz",
-      address: "100000, O‘zbekiston, Toshkent shahri, Abay ko‘chasi, 13A",
+      phone: "+998 69 211 11 70",
+      email: "info@mydiploma.uz",
+      address: "O‘zbekiston,Namangan, Mashrab. ko'cha 7 uy",
 
       navigationTitle: "Navigatsiya",
       navigation: {
@@ -628,6 +643,21 @@ export const translations = {
     },
   },
   en: {
+    test: {
+      title: "Mydiploma",
+      tm: "TM",
+      subtitle: "The site is working in Test mode",
+      phone: "Phone",
+      info: "More information",
+      ins: "Instagram",
+      tel: "Telegram",
+      modal: {
+        title: "Additional information",
+        subtitle: "Additional information can be obtained from our",
+        kan: "Our Telegram channel",
+        subtitle2: "You can get it."
+      }
+    },
     nav: {
       home: "Home",
       about: "About Us",
@@ -718,7 +748,7 @@ export const translations = {
     },
     hero: {
       title: "Study Abroad Made Easy",
-      subtitle: "MyDeploma.uz",
+      subtitle: "Mydiploma.uz",
       description:
         "We provide you with opportunities to study at the world's best universities. With professional consultation and full support.",
       cta: "Start My Journey",
@@ -1096,7 +1126,7 @@ export const translations = {
     },
     footer: {
       phone: "+998 33 900 00 30",
-      email: "info@world.uz",
+      email: "info@mydiploma.uz",
       address: "100000, Uzbekistan, Tashkent city, Abay street, 13A",
 
       navigationTitle: "Navigation",
@@ -1136,6 +1166,21 @@ export const translations = {
     },
   },
   ru: {
+    test: {
+      title: "Mydiploma",
+      tm: "TM",
+      subtitle: "Сайт работает в тестовом режиме",
+      phone: "Телефон",
+      info: "Подробнее",
+      ins: "Instagram",
+      tel: "Telegram",
+      modal: {
+        title: "Дополнительная информация",
+        subtitle: "Дополнительную информацию можно получить на нашем канале",
+        kan: "Наш канал в Telegram",
+        subtitle2: "Вы можете получить."
+      }
+    },
     nav: {
       home: "Главная",
       about: "О нас",
@@ -1226,7 +1271,7 @@ export const translations = {
     },
     hero: {
       title: "Обучение за рубежом стало проще",
-      subtitle: "MyDeploma.uz",
+      subtitle: "Mydiploma.uz",
       description:
         "Мы предоставляем вам возможности обучения в лучших университетах мира. С профессиональными консультациями и полной поддержкой.",
       cta: "Начать мое путешествие",
@@ -1603,9 +1648,9 @@ export const translations = {
       subject: "Связаться с нами",
     },
     footer: {
-      phone: "+998 33 900 00 30",
-      email: "info@world.uz",
-      address: "100000, Узбекистан, г. Ташкент, ул. Абай, 13А",
+      phone: "+998 69 211 11 70",
+      email: "info@mydiploma.uz",
+      address: "Узбекистан, г. Namangan, Mashrab. 7 uy",
 
       navigationTitle: "Навигация",
       navigation: {

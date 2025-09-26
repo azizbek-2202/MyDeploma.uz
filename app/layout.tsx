@@ -1,23 +1,23 @@
-import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import './globals.css'
+import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
 
-export const metadata: Metadata = {
-  title: 'MyDeploma',
-  description: 'Created with v0',
-  generator: 'v0.app',
+export const metadata = {
+  title: "MyDeploma",
+  description: "Test project",
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`font-sans bg-gray-50 dark:bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white ${GeistSans.variable} ${GeistMono.variable}`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

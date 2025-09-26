@@ -21,31 +21,31 @@ function Questions({ currentLang }: QuestionProps) {
             id: 1,
             title: "Harvard University",
             desc: "Computer Science • USA",
-            image: "https://swiperjs.com/demos/images/nature-1.jpg",
+            image: "https://avatars.mds.yandex.net/get-altay/12810232/2a00000191556c7fbd4a7d49135d933d1608/orig",
         },
         {
             id: 2,
             title: "Oxford University",
             desc: "Business Administration • UK",
-            image: "https://swiperjs.com/demos/images/nature-2.jpg",
+            image: "https://i.insider.com/568ea4b1dd08954e458b4794",
         },
         {
             id: 3,
             title: "MIT",
             desc: "Engineering • USA",
-            image: "https://swiperjs.com/demos/images/nature-3.jpg",
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Great_Dome%2C_Massachusetts_Institute_of_Technology%2C_Aug_2019.jpg/1200px-Great_Dome%2C_Massachusetts_Institute_of_Technology%2C_Aug_2019.jpg",
         },
         {
             id: 4,
             title: "University of Toronto",
             desc: "Medicine • Canada",
-            image: "https://swiperjs.com/demos/images/nature-4.jpg",
+            image: "https://i.ytimg.com/vi/RirZlETqXa4/maxresdefault.jpg",
         },
         {
             id: 5,
             title: "ETH Zurich",
             desc: "Data Science • Switzerland",
-            image: "https://swiperjs.com/demos/images/nature-5.jpg",
+            image: "https://i.ytimg.com/vi/vzH4PNZbp2U/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-DoACuAiKAgwIABABGGUgVyhCMA8=&amp;rs=AOn4CLBxb5svpChtYXDuGthePuHC586iQw",
         },
     ]
 
