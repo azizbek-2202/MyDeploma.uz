@@ -59,14 +59,14 @@ function TestPage() {
                                 href="tel:+998692111170"
                                 className="text-lg px-8 py-2 border-2 bg-transparent rounded-xl border-white cursor-pointer transition"
                             >
-                                {t.test.phone}
+                                +998 69 211 11 70
                             </Link>
 
                             <Link
                                 href="tel:+998505111170"
                                 className="text-lg px-8 py-2 border-2 bg-transparent rounded-xl border-white cursor-pointer transition"
                             >
-                                {t.test.phone}
+                                +998 50 511 11 70
                             </Link>
                         </div>
 
